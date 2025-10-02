@@ -23,7 +23,7 @@ export interface Skill {
 
 export const experiences: Experience[] = [
   {
-    position: "Flutter Developer",
+    position: "Mobile Developer",
     company: "PT Bank Rakyat Indonesia",
     period: "June 2025 – Present",
     achievements: [

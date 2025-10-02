@@ -27,7 +27,7 @@ export default function Hero() {
           </p>
           
           {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-12">
+          {/* <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-12">
             <a 
               href="#contact" 
               className="bg-gray-900 text-white px-6 py-3 rounded-sm hover:bg-gray-800 transition-colors font-medium text-sm uppercase tracking-wide"
@@ -47,7 +47,7 @@ export default function Hero() {
               Download CV
               <span className="text-base">↓</span>
             </a>
-          </div>
+          </div> */}
           
           {/* Contact Info */}
           <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4 text-gray-600 mb-12">
@@ -73,43 +73,6 @@ export default function Hero() {
               >
                 LinkedIn
               </a>
-            </div>
-          </div>
-
-          {/* Stats Section */}
-          <div className="border-t border-b border-gray-200 py-8 mb-12">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-1">4+</div>
-                <div className="text-xs text-gray-600 uppercase tracking-wide">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-1">10+</div>
-                <div className="text-xs text-gray-600 uppercase tracking-wide">Projects</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-1">60%</div>
-                <div className="text-xs text-gray-600 uppercase tracking-wide">Performance Gain</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-900 mb-1">0%</div>
-                <div className="text-xs text-gray-600 uppercase tracking-wide">Crash Rate</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Expertise Highlights */}
-          <div className="max-w-2xl mx-auto">
-            <h3 className="text-sm font-medium text-gray-900 uppercase tracking-wider mb-4">Core Expertise</h3>
-            <div className="flex flex-wrap justify-center gap-3">
-              {['Swift', 'Clean Architecture', 'iOS Development', 'SOLID Principles', 'Flutter', 'Team Leadership'].map((skill) => (
-                <span 
-                  key={skill}
-                  className="bg-gray-100 text-gray-700 px-3 py-1 rounded text-xs font-medium uppercase tracking-wide"
-                >
-                  {skill}
-                </span>
-              ))}
             </div>
           </div>
 

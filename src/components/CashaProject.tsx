@@ -303,7 +303,7 @@ export default function CashaProject() {
                     'Beautiful charts and spending insights using Swift Charts',
                     'Modular monorepo architecture for scalability',
                     'Biometric authentication and bank-level security',
-                    'Cross-platform compatibility (iOS + React Native migration)'
+                    'Cross-platform compatibility (iOS + iPad)'
                   ].map((feature, index) => (
                     <div key={index} className="flex items-start gap-3 p-3 hover:bg-gray-50 rounded-sm transition-colors">
                       <div className="w-5 h-5 bg-gray-200 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
