@@ -23,7 +23,7 @@ export default function CashaProject() {
     { src: screenshot3, alt: "Casha Transactions", description: "Transaction history" },
     { src: screenshot4, alt: "Casha Reports", description: "Spending analytics" },
     { src: screenshot5, alt: "Casha Budget", description: "Budget management" },
-    { src: screenshot6, alt: "Set Up Currency", description: "All Currency" },
+    { src: screenshot6, alt: "All Currency", description: "Worldwide currency" }
   ]
 
   return (
@@ -109,77 +109,78 @@ export default function CashaProject() {
 
               {/* All Screenshots Displayed in Clean Grid */}
               <div className="p-8 lg:p-12 bg-gradient-to-br from-blue-50 to-indigo-50 flex items-center justify-center">
-                <div className="w-full max-w-2xl">
-                  {/* Main Screenshot Grid */}
-                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3 items-center justify-items-center">
-                    {/* Row 1 */}
-                    <div className="w-full max-w-[180px] transform hover:scale-105 transition-transform duration-300">
-                      <div className="relative rounded-2xl shadow-xl border-4 border-white overflow-hidden bg-white">
-                        <Image 
-                          src={screenshots[0].src}
-                          alt={screenshots[0].alt}
-                          className="w-full h-auto object-cover"
-                        />
-                      </div>
-                      <p className="text-center text-gray-600 text-xs mt-2 font-medium">New Transaction</p>
-                    </div>
-                    
-                    <div className="w-full max-w-[180px] transform hover:scale-105 transition-transform duration-300">
-                      <div className="relative rounded-2xl shadow-xl border-4 border-white overflow-hidden bg-white">
-                        <Image 
-                          src={screenshots[1].src}
-                          alt={screenshots[1].alt}
-                          className="w-full h-auto object-cover"
-                        />
-                      </div>
-                      <p className="text-center text-gray-600 text-xs mt-2 font-medium">Dashboard</p>
-                    </div>
-                    
-                    <div className="w-full max-w-[180px] transform hover:scale-105 transition-transform duration-300">
-                      <div className="relative rounded-2xl shadow-xl border-4 border-white overflow-hidden bg-white">
-                        <Image 
-                          src={screenshots[2].src}
-                          alt={screenshots[2].alt}
-                          className="w-full h-auto object-cover"
-                        />
-                      </div>
-                      <p className="text-center text-gray-600 text-xs mt-2 font-medium">Transactions</p>
-                    </div>
+  <div className="w-full max-w-2xl">
+    {/* Main Screenshot Grid */}
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 items-center justify-items-center">
+      {/* Row 1 */}
+      <div className="w-full max-w-[180px] transform hover:scale-105 transition-transform duration-300">
+        <div className="relative rounded-2xl shadow-xl border-4 border-white overflow-hidden bg-white">
+          <Image 
+            src={screenshots[0].src}
+            alt={screenshots[0].alt}
+            className="w-full h-auto object-cover"
+          />
+        </div>
+        <p className="text-center text-gray-600 text-xs mt-2 font-medium">New Transaction</p>
+      </div>
+      
+      <div className="w-full max-w-[180px] transform hover:scale-105 transition-transform duration-300">
+        <div className="relative rounded-2xl shadow-xl border-4 border-white overflow-hidden bg-white">
+          <Image 
+            src={screenshots[1].src}
+            alt={screenshots[1].alt}
+            className="w-full h-auto object-cover"
+          />
+        </div>
+        <p className="text-center text-gray-600 text-xs mt-2 font-medium">Dashboard</p>
+      </div>
+      
+      <div className="w-full max-w-[180px] transform hover:scale-105 transition-transform duration-300">
+        <div className="relative rounded-2xl shadow-xl border-4 border-white overflow-hidden bg-white">
+          <Image 
+            src={screenshots[2].src}
+            alt={screenshots[2].alt}
+            className="w-full h-auto object-cover"
+          />
+        </div>
+        <p className="text-center text-gray-600 text-xs mt-2 font-medium">Transactions</p>
+      </div>
 
-                    {/* Row 2 */}
-                    <div className="w-full max-w-[180px] transform hover:scale-105 transition-transform duration-300">
-                      <div className="relative rounded-2xl shadow-xl border-4 border-white overflow-hidden bg-white">
-                        <Image 
-                          src={screenshots[3].src}
-                          alt={screenshots[3].alt}
-                          className="w-full h-auto object-cover"
-                        />
-                      </div>
-                      <p className="text-center text-gray-600 text-xs mt-2 font-medium">Reports</p>
-                    </div>
-                    
-                    <div className="w-full max-w-[180px] transform hover:scale-105 transition-transform duration-300 md:col-start-2">
-                      <div className="relative rounded-2xl shadow-xl border-4 border-white overflow-hidden bg-white">
-                        <Image 
-                          src={screenshots[4].src}
-                          alt={screenshots[4].alt}
-                          className="w-full h-auto object-cover"
-                        />
-                      </div>
-                      <p className="text-center text-gray-600 text-xs mt-2 font-medium">Budget</p>
-                    </div>
-
-                      <div className="w-full max-w-[180px] transform hover:scale-105 transition-transform duration-300">
-                      <div className="relative rounded-2xl shadow-xl border-4 border-white overflow-hidden bg-white">
-                        <Image 
-                          src={screenshots[5].src}
-                          alt={screenshots[5].alt}
-                          className="w-full h-auto object-cover"
-                        />
-                      </div>
-                      <p className="text-center text-gray-600 text-xs mt-2 font-medium">Budget</p>
-                    </div>
-                  </div>
+      {/* Row 2 */}
+      <div className="w-full max-w-[180px] transform hover:scale-105 transition-transform duration-300">
+        <div className="relative rounded-2xl shadow-xl border-4 border-white overflow-hidden bg-white">
+          <Image 
+            src={screenshots[3].src}
+            alt={screenshots[3].alt}
+            className="w-full h-auto object-cover"
+          />
+        </div>
+        <p className="text-center text-gray-600 text-xs mt-2 font-medium">Reports</p>
+      </div>
+      
+      <div className="w-full max-w-[180px] transform hover:scale-105 transition-transform duration-300">
+        <div className="relative rounded-2xl shadow-xl border-4 border-white overflow-hidden bg-white">
+          <Image 
+            src={screenshots[4].src}
+            alt={screenshots[4].alt}
+            className="w-full h-auto object-cover"
+          />
+        </div>
+        <p className="text-center text-gray-600 text-xs mt-2 font-medium">Budget</p>
+      </div>
+      
+      <div className="w-full max-w-[180px] transform hover:scale-105 transition-transform duration-300">
+        <div className="relative rounded-2xl shadow-xl border-4 border-white overflow-hidden bg-white">
+          <Image 
+            src={screenshots[5].src}
+            alt={screenshots[5].alt}
+            className="w-full h-auto object-cover"
+          />
+        </div>
+        <p className="text-center text-gray-600 text-xs mt-2 font-medium">Currency</p>
+      </div>
+    </div>
+                 
 
                   {/* Feature Highlights */}
                   <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
@@ -302,7 +303,7 @@ export default function CashaProject() {
                     'Beautiful charts and spending insights using Swift Charts',
                     'Modular monorepo architecture for scalability',
                     'Biometric authentication and bank-level security',
-                    'Cross-platform compatibility (iOS + iPAD)'
+                    'Cross-platform compatibility (iOS + React Native migration)'
                   ].map((feature, index) => (
                     <div key={index} className="flex items-start gap-3 p-3 hover:bg-gray-50 rounded-sm transition-colors">
                       <div className="w-5 h-5 bg-gray-200 rounded flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -355,11 +356,230 @@ export default function CashaProject() {
               </div>
             </div>
           </div>
+          {/* Technology Stack */}
+          <div className="border border-gray-200 rounded-sm p-8 bg-gray-50 mb-16">
+            <h2 className="text-2xl font-bold text-center mb-12 text-gray-900">Technology Stack & Architecture</h2>
+            
+            {/* Architecture Overview */}
+            <div className="mb-12">
+              <h3 className="text-xl font-semibold mb-6 text-gray-900 text-center">Clean Architecture + Modular Monorepo</h3>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-center">
+                <div className="p-4 border border-gray-200 rounded-sm bg-white">
+                  <h4 className="font-semibold text-gray-900 mb-2">CashaApp</h4>
+                  <p className="text-gray-600 text-sm">Presentation Layer</p>
+                  <p className="text-gray-500 text-xs mt-2">SwiftUI Views, Navigation, Coordinators</p>
+                </div>
+                <div className="p-4 border border-gray-200 rounded-sm bg-white">
+                  <h4 className="font-semibold text-gray-900 mb-2">Domain</h4>
+                  <p className="text-gray-600 text-sm">Business Logic</p>
+                  <p className="text-gray-500 text-xs mt-2">Use Cases, Domain Models, Protocols</p>
+                </div>
+                <div className="p-4 border border-gray-200 rounded-sm bg-white">
+                  <h4 className="font-semibold text-gray-900 mb-2">Data</h4>
+                  <p className="text-gray-600 text-sm">Data Layer</p>
+                  <p className="text-gray-500 text-xs mt-2">Repositories, Data Sources, Mapping</p>
+                </div>
+                <div className="p-4 border border-gray-200 rounded-sm bg-white">
+                  <h4 className="font-semibold text-gray-900 mb-2">Core</h4>
+                  <p className="text-gray-600 text-sm">Shared Utilities</p>
+                  <p className="text-gray-500 text-xs mt-2">Networking, Persistence, Services</p>
+                </div>
+              </div>
+            </div>
 
-          {/* The rest of your existing component remains unchanged */}
-          {/* ... */}
+            {/* Core Technologies */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              <div className="text-center p-6 border border-gray-200 rounded-sm bg-white">
+                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-gray-600 text-xl">⚡</span>
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">Swift 5+</h4>
+                <p className="text-gray-600 text-sm mb-2">Primary Language</p>
+                <div className="text-xs text-gray-500">Modern Swift Concurrency</div>
+              </div>
+              
+              <div className="text-center p-6 border border-gray-200 rounded-sm bg-white">
+                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-gray-600 text-xl">🎨</span>
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">SwiftUI</h4>
+                <p className="text-gray-600 text-sm mb-2">Declarative UI</p>
+                <div className="text-xs text-gray-500">@State, @Published, Reactive</div>
+              </div>
+              
+              <div className="text-center p-6 border border-gray-200 rounded-sm bg-white">
+                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-gray-600 text-xl">💾</span>
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">Core Data</h4>
+                <p className="text-gray-600 text-sm mb-2">Local Persistence</p>
+                <div className="text-xs text-gray-500">Offline-first, Entities</div>
+              </div>
+              
+              <div className="text-center p-6 border border-gray-200 rounded-sm bg-white">
+                <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-gray-600 text-xl">🌐</span>
+                </div>
+                <h4 className="font-semibold text-gray-900 mb-2">Alamofire</h4>
+                <p className="text-gray-600 text-sm mb-2">Networking</p>
+                <div className="text-xs text-gray-500">HTTP, Multipart, Endpoints</div>
+              </div>
+            </div>
+
+            {/* AI & Advanced Features */}
+            <div className="border-t border-gray-200 pt-8 mb-8">
+              <h3 className="font-semibold text-center mb-6 text-gray-900 text-lg">AI-Powered Features & Advanced Capabilities</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="p-4 border border-gray-200 rounded-sm bg-white">
+                  <h4 className="font-semibold text-gray-900 mb-3">🤖 AI Integration</h4>
+                  <ul className="text-gray-600 text-sm space-y-2">
+                    <li className="flex items-center gap-2">
+                      <span className="text-green-500">•</span>
+                      <span>Natural language → Transaction categorization</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-green-500">•</span>
+                      <span>Receipt image processing → Structured data</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-green-500">•</span>
+                      <span>Remote API integration for AI features</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="p-4 border border-gray-200 rounded-sm bg-white">
+                  <h4 className="font-semibold text-gray-900 mb-3">📊 Data Visualization</h4>
+                  <ul className="text-gray-600 text-sm space-y-2">
+                    <li className="flex items-center gap-2">
+                      <span className="text-blue-500">•</span>
+                      <span>Swift Charts for spending analytics</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-blue-500">•</span>
+                      <span>Pie charts, time-based reports</span>
+                    </li>
+                    <li className="flex items-center gap-2">
+                      <span className="text-blue-500">•</span>
+                      <span>Real-time data binding</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* Additional Technologies */}
+            <div className="border-t border-gray-200 pt-8">
+              <h3 className="font-semibold text-center mb-6 text-gray-900 text-sm uppercase tracking-wide">Development Tools & Testing</h3>
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-center">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2 text-sm">Testing</h4>
+                  <div className="space-y-1">
+                    <span className="bg-white border border-gray-300 text-gray-700 px-2 py-1 rounded text-xs block">XCTest</span>
+                    <span className="bg-white border border-gray-300 text-gray-700 px-2 py-1 rounded text-xs block">Unit Tests</span>
+                    <span className="bg-white border border-gray-300 text-gray-700 px-2 py-1 rounded text-xs block">Integration Tests</span>
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2 text-sm">Dependency Mgmt</h4>
+                  <div className="space-y-1">
+                    <span className="bg-white border border-gray-300 text-gray-700 px-2 py-1 rounded text-xs block">SPM</span>
+                    <span className="bg-white border border-gray-300 text-gray-700 px-2 py-1 rounded text-xs block">Alamofire</span>
+                    <span className="bg-white border border-gray-300 text-gray-700 px-2 py-1 rounded text-xs block">Algorithms</span>
+                  </div>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-2 text-sm">Architecture</h4>
+                  <div className="space-y-1">
+                    <span className="bg-white border border-gray-300 text-gray-700 px-2 py-1 rounded text-xs block">Clean Arch</span>
+                    <span className="bg-white border border-gray-300 text-gray-700 px-2 py-1 rounded text-xs block">Modular</span>
+                    <span className="bg-white border border-gray-300 text-gray-700 px-2 py-1 rounded text-xs block">Monorepo</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Development Highlights */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+            <div className="text-center p-8 border border-gray-200 rounded-sm bg-white">
+              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-gray-600 text-xl">🏗️</span>
+              </div>
+              <h4 className="font-semibold text-gray-900 mb-3 text-lg">Clean Architecture</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Strict separation of concerns with Domain layer independent of frameworks. 
+                Modular monorepo structure ensures scalability and testability.
+              </p>
+            </div>
+            
+            <div className="text-center p-8 border border-gray-200 rounded-sm bg-white">
+              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-gray-600 text-xl">🤖</span>
+              </div>
+              <h4 className="font-semibold text-gray-900 mb-3 text-lg">AI-Powered</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Intelligent expense categorization from natural language and receipt images. 
+                AI integration through remote APIs with local Core Data persistence.
+              </p>
+            </div>
+            
+            <div className="text-center p-8 border border-gray-200 rounded-sm bg-white">
+              <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-gray-600 text-xl">📊</span>
+              </div>
+              <h4 className="font-semibold text-gray-900 mb-3 text-lg">Data Insights</h4>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Comprehensive analytics with Swift Charts, real-time spending patterns, 
+                and beautiful visualizations for informed financial decisions.
+              </p>
+            </div>
+          </div>
+
+          {/* Development Story */}
+          <div className="border border-gray-200 rounded-sm p-8 bg-white mb-16">
+            <h2 className="text-2xl font-bold text-center mb-8 text-gray-900">Technical Implementation</h2>
+            <div className="max-w-4xl mx-auto">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-4 text-sm uppercase tracking-wide">Architecture Principle</h4>
+                  <p className="text-gray-700 leading-relaxed text-sm">
+                     &quot;Domain layer never depends on frameworks (CoreData, Alamofire, etc.). 
+                    This ensures business logic remains pure Swift and fully testable, 
+                    while data layer handles framework-specific implementations.&quot;
+                  </p>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-900 mb-4 text-sm uppercase tracking-wide">Current State</h4>
+                  <p className="text-gray-700 leading-relaxed text-sm">
+                                       &quot;SwiftUI + Clean Architecture + Core Data + Alamofire + AI API + Swift Charts 
+                    in a modular monorepo, with ongoing React Native migration for cross-platform compatibility 
+                    and NestJS backend integration.&quot;
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Final Call to Action */}
+          <div className="border border-gray-200 rounded-sm p-12 bg-gray-50 text-center">
+            <h2 className="text-3xl font-bold mb-6 text-gray-900">Experience Casha</h2>
+            <p className="text-gray-700 text-xl mb-8 max-w-2xl mx-auto">
+              Download the app to experience AI-powered expense tracking and modern iOS development practices.
+            </p>
+            <a 
+              href="https://apps.apple.com/app/casha-your-finance-companion"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-4 bg-gray-900 text-white px-10 py-5 rounded-sm hover:bg-gray-800 transition-colors font-medium text-base uppercase tracking-wide"
+            >
+              <span className="text-xl">📱</span>
+              <span>Download on the App Store</span>
+            </a>
+            <p className="text-gray-600 text-sm mt-4">Free download • iOS 14.0+ • Optimized for iPhone</p>
+          </div>
         </div>
       </div>
     </section>
   )
 }
+         
