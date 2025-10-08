@@ -63,12 +63,13 @@ export default function Achievements() {
                 <h4 className="font-semibold text-gray-900 mb-2 text-sm">0% Crash Rate</h4>
                 <p className="text-gray-600 text-xs">Production Applications</p>
               </div>
+             
               <div className="text-center p-4 border border-gray-200 rounded-sm bg-white">
                 <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-gray-600 text-lg">👥</span>
+                  <span className="text-gray-600 text-lg">📱</span>
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2 text-sm">3 Teams Mentored</h4>
-                <p className="text-gray-600 text-xs">Code Quality & Standards</p>
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm"> App Store Release</h4>
+                <p className="text-gray-600 text-xs">Casha Finance App</p>
               </div>
             </div>
           </div>
@@ -93,7 +94,8 @@ export default function Achievements() {
                     'Code Quality & Standards',
                     'Team Leadership & Mentoring',
                     'Agile Development Practices',
-                    'Cross-Platform Development'
+                    'Cross-Platform Development',
+                    'Platform Engineering'
                   ].map((strength, index) => (
                     <div key={index} className="flex items-center gap-3">
                       <div className="w-4 h-4 bg-gray-200 rounded flex items-center justify-center flex-shrink-0">
@@ -115,7 +117,8 @@ export default function Achievements() {
                     'TDD Approach',
                     'CI/CD Pipelines',
                     'Code Reviews',
-                    'Agile Scrum'
+                    'Agile Scrum',
+                    'Modular Development'
                   ].map((method, index) => (
                     <span 
                       key={index}
@@ -135,9 +138,9 @@ export default function Achievements() {
                 {[
                   'Banking & Finance',
                   'Digital Identity',
-                  'E-commerce',
-                  'Education Technology',
-                  'Enterprise Solutions'
+                  'FinTech',
+                  'Enterprise Solutions',
+                  'Platform Engineering'
                 ].map((industry, index) => (
                   <span 
                     key={index}
@@ -155,10 +158,10 @@ export default function Achievements() {
             <h3 className="text-lg font-semibold mb-6 text-gray-900">Career Progression</h3>
             <div className="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto">
               {[
-                { year: '2019', role: 'iOS Engineer', company: 'PT BUANA VARIA' },
+                { year: '2020', role: 'iOS Engineer', company: 'PT BUANA VARIA' },
                 { year: '2021', role: 'iOS Engineer', company: 'PT DIGIASIA BIOS' },
                 { year: '2023', role: 'iOS Engineer', company: 'PT PRIVY ID' },
-                { year: '2025', role: 'Flutter Developer', company: 'BANK RAKYAT' }
+                { year: '2025', role: 'Mobile Platform Engineer', company: 'BANK RAKYAT' }
               ].map((step, index) => (
                 <div key={index} className="border border-gray-200 rounded-sm px-4 py-3 bg-white text-center min-w-[140px]">
                   <div className="text-gray-900 font-bold text-sm mb-1">{step.year}</div>

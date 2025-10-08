@@ -324,7 +324,7 @@ export default function CashaProject() {
                   <iframe 
                     width="100%" 
                     height="100%" 
-                    src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+                    src="https://www.youtube.com/embed/pVO5JuFUmlI"
                     title="Casha App Demo - Personal Finance iOS Application"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

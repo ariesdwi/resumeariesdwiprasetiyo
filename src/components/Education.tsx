@@ -21,7 +21,7 @@ export default function Education() {
                     <div className="flex items-start gap-4 mb-3">
                       <div className="w-10 h-10 bg-gray-100 rounded flex items-center justify-center flex-shrink-0 mt-1">
                         <span className="text-gray-600 font-medium text-sm">
-                          {getEducationIcon(edu.institution)}
+                          {edu.icon || getEducationIcon(edu.institution)}
                         </span>
                       </div>
                       <div>
@@ -32,19 +32,21 @@ export default function Education() {
                     </div>
                     
                     {/* Skills Gained */}
-                    <div className="ml-14">
-                      <h4 className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">Key Learnings</h4>
-                      <div className="flex flex-wrap gap-2">
-                        {getSkillsByEducation(edu.institution).map((skill, skillIndex) => (
-                          <span 
-                            key={skillIndex} 
-                            className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs font-medium"
-                          >
-                            {skill}
-                          </span>
-                        ))}
+                    {edu.skills && (
+                      <div className="ml-14">
+                        <h4 className="text-xs font-medium text-gray-500 uppercase tracking-wide mb-2">Key Learnings</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {edu.skills.map((skill, skillIndex) => (
+                            <span 
+                              key={skillIndex} 
+                              className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs font-medium"
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                   
                   {/* Period */}
@@ -66,7 +68,7 @@ export default function Education() {
                 <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-gray-600 text-lg">🎓</span>
                 </div>
-               <h4 className="font-semibold text-gray-900 mb-2 text-sm">Bachelor&apos;s Degree</h4>
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm">Bachelor's Degree</h4>
                 <p className="text-gray-600 text-xs">Computer Science Foundation</p>
                 <p className="text-gray-500 text-xs mt-1">Pertamina University</p>
               </div>
@@ -75,18 +77,18 @@ export default function Education() {
                 <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-gray-600 text-lg">📱</span>
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2 text-sm">Apple Certified</h4>
-                <p className="text-gray-600 text-xs">iOS Development Specialist</p>
-                <p className="text-gray-500 text-xs mt-1">Developer Academy</p>
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm">iOS Specialist</h4>
+                <p className="text-gray-600 text-xs">Professional Development</p>
+                <p className="text-gray-500 text-xs mt-1">4+ Years Experience</p>
               </div>
               
               <div className="text-center p-6 border border-gray-200 rounded-sm bg-white">
                 <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <span className="text-gray-600 text-lg">💼</span>
+                  <span className="text-gray-600 text-lg">🚀</span>
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2 text-sm">4+ Years</h4>
-                <p className="text-gray-600 text-xs">Professional Experience</p>
-                <p className="text-gray-500 text-xs mt-1">Industry Practice</p>
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm">Full-Stack</h4>
+                <p className="text-gray-600 text-xs">Mobile & Backend</p>
+                <p className="text-gray-500 text-xs mt-1">Continuous Learning</p>
               </div>
             </div>
           </div>
@@ -102,9 +104,9 @@ export default function Education() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
               {[
                 { name: 'SwiftUI', level: 'Advanced' },
-                { name: 'Combine', level: 'Proficient' },
+                { name: 'Flutter', level: 'Intermediate' },
                 { name: 'Clean Arch', level: 'Expert' },
-                { name: 'Flutter', level: 'Learning' }
+                { name: 'Backend', level: 'Proficient' }
               ].map((tech, index) => (
                 <div key={index} className="text-center p-3 border border-gray-200 rounded-sm bg-white">
                   <div className="text-gray-900 font-medium text-sm mb-1">{tech.name}</div>
@@ -117,7 +119,7 @@ export default function Education() {
             <div className="mt-8 pt-6 border-t border-gray-200">
               <h4 className="font-semibold text-center mb-4 text-gray-900 text-sm uppercase tracking-wide">Current Learning Focus</h4>
               <div className="flex flex-wrap justify-center gap-2">
-                {['Advanced Swift Concurrency', 'Flutter Architecture', 'Performance Optimization', 'CI/CD Pipelines'].map((topic) => (
+                {['SwiftUI Advanced Patterns', 'Flutter Architecture', 'Platform Engineering', 'AI Integration'].map((topic) => (
                   <span 
                     key={topic}
                     className="border border-gray-300 text-gray-700 px-3 py-1 rounded text-xs font-medium"
@@ -135,9 +137,9 @@ export default function Education() {
             <div className="flex flex-wrap justify-center gap-4">
               {[
                 'Apple Developer Academy Alumni',
-                'iOS Development Specialist',
+                'iOS Development Specialist', 
                 'Clean Architecture Practitioner',
-                'Agile Methodology Certified'
+                'Full-Stack Mobile Developer'
               ].map((cert, index) => (
                 <div key={index} className="border border-gray-200 rounded-sm px-4 py-2 bg-white">
                   <span className="text-gray-700 text-sm font-medium">{cert}</span>
@@ -151,20 +153,9 @@ export default function Education() {
   )
 }
 
-// Helper function for education icons
+// Helper function for education icons (fallback)
 function getEducationIcon(institution: string) {
   if (institution.includes('Pertamina')) return 'UNI'
   if (institution.includes('Apple')) return 'iOS'
   return 'EDU'
-}
-
-// Helper function for skills gained from each education
-function getSkillsByEducation(institution: string) {
-  if (institution.includes('Pertamina')) {
-    return ['Algorithms', 'Data Structures', 'Software Engineering', 'Computer Science', 'OOP']
-  }
-  if (institution.includes('Apple')) {
-    return ['Swift', 'UIKit', 'iOS Development', 'Xcode', 'App Store', 'Mobile Design']
-  }
-  return []
 }

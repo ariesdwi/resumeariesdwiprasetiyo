@@ -4,6 +4,7 @@ export interface Experience {
   company: string;
   period: string;
   achievements: string[];
+  technologies: string[];
 }
 
 export interface Project {
@@ -14,6 +15,8 @@ export interface Project {
   appStoreUrl?: string;
   githubUrl?: string;
   features?: string[];
+  role?: string;
+  period?: string;
 }
 
 export interface Skill {
@@ -21,53 +24,102 @@ export interface Skill {
   items: string[];
 }
 
+export interface Education {
+  institution: string;
+  degree: string;
+  period: string;
+  description: string;
+  skills?: string[];
+  icon?: string;
+}
+
+export interface Achievement {
+  title: string;
+  position: string;
+  date: string;
+  description: string;
+}
+
+export interface PersonalInfo {
+  name: string;
+  title: string;
+  phone: string;
+  email: string;
+  linkedin: string;
+  summary: string;
+}
+
 export const experiences: Experience[] = [
   {
-    position: "Mobile Developer",
+    position: "Mobile Platform Engineer",
     company: "PT Bank Rakyat Indonesia",
     period: "June 2025 – Present",
     achievements: [
-      "Reduced feature delivery time by 35% by establishing scalable Combine pipelines and modular components",
-      "Conducted weekly code reviews across 3 iOS teams, raising overall code quality and test coverage",
-      "Collaborated with PMs and QA to define milestones and ensure on-time delivery with >95% sprint completion rate"
-    ]
+      "Led Composable Mobile App Platform using Flutter Atomic Design & Clean Architecture",
+      "Authored 48-page technical research document establishing mobile development standards",
+      "Built reusable Flutter component library with 100% test coverage for core features",
+      "Reduced feature delivery time by 35% through modular architecture and code reviews",
+      "Initiating iOS Native Composable Architecture with SwiftUI/UIKit for Q4 2025"
+    ],
+    technologies: ["Flutter", "Dart", "Swift", "SwiftUI", "Atomic Design", "Clean Architecture", "Modular Architecture", "Combine", "CI/CD"]
   },
   {
     position: "iOS Engineer",
     company: "PT PRIVY IDENTITAS DIGITAL",
     period: "March 2023 – November 2024",
     achievements: [
-      "Spearheaded the design and implementation of a modular Privy Contact Module and Privy Manage Signature with Combine and MVVM",
-      "Integrated synchronize contact and managing list of signature features",
-      "Improved code maintainability and team collaboration through modular architecture"
-    ]
+      "Developed modular Privy Contact and Signature modules using MVVM & Combine",
+      "Implemented CI/CD pipeline with Fastlane for automated builds and deployments",
+      "Migrated entire codebase to programmatic UI using Xcodegen for project generation",
+      "Integrated Firebase Analytics for user behavior tracking and performance monitoring",
+      "Optimized contact module with CoreData for local storage and offline capabilities",
+      "Utilized SnapKit for efficient Auto Layout implementation"
+    ],
+    technologies: ["Swift", "MVVM", "Combine", "Modular Architecture", "Fastlane", "CI/CD", "Xcodegen", "Firebase Analytics", "CoreData", "SnapKit", "Programmatic UI"]
   },
   {
     position: "iOS Engineer",
     company: "PT DIGIASIA BIOS",
     period: "March 2021 – March 2023",
     achievements: [
-      "Refactored legacy codebase using MVVM and migrating UI Programatically, leading to a 40% improvement in performance and maintainability",
-      "Partnered with Product to define and clarify 15+ key feature requirements, resulting in faster development cycles",
-      "Documented core architecture and reusable modules, reducing onboarding time for new developers by 50%"
-    ]
+      "Refactored legacy codebase to MVVM, improving performance by 40%",
+      "Partnered with Product to define 15+ key feature requirements",
+      "Reduced new developer onboarding time by 50% through documentation"
+    ],
+    technologies: ["Swift", "MVVM", "Programmatic UI"]
   },
   {
     position: "iOS Engineer",
-    company: "PT BUANA VARIA KOMPUTAMA",
+    company: "PT BUANA VARIA KOMPUTAMA", 
     period: "December 2020 – November 2021",
     achievements: [
-      "Led a project-wide transition from storyboard-based development to fully XIB UI",
-      "Launched a critical update with 0 crash reports over 3 months, significantly enhancing user trust",
-      "Boosted code readability and scalability by introducing consistent code conventions and component reuse",
-      "Revamped 40% codebase from MVC to MVVM Design Pattern"
-    ]
+      "Led transition from storyboard to XIB-based UI development",
+      "Launched critical update with 0 crash reports over 3 months",
+      "Revamped 40% codebase from MVC to MVVM pattern"
+    ],
+    technologies: ["Swift", "XIB", "MVVM", "MVC"]
   }
 ];
 
 export const projects: Project[] = [
   {
     id: 1,
+    title: "Casha - Personal Finance",
+    description: "AI-powered personal finance app with natural language transaction input, multi-currency support, and intelligent spending insights. Built with full-stack architecture from ground up.",
+    technologies: ["SwiftUI", "Clean Architecture", "Nest.js", "Prisma", "PostgreSQL", "OpenAI API", "Next.js", "TypeScript", "Tailwind CSS"],
+    appStoreUrl: "https://apps.apple.com/app/casha-your-finance-companion",
+    role: "Founder & Full-Stack Developer",
+    period: "2024 – Present",
+    features: [
+      "AI-powered transaction categorization",
+      "Natural language input processing",
+      "Multi-currency support",
+      "Real-time financial insights",
+      "Secure local data storage"
+    ]
+  },
+  {
+    id: 2,
     title: "Karapan Sapi Apps",
     description: "iOS application for managing and tracking traditional bull racing events with real-time updates, participant management, and live scoring system. Built with modern iOS architecture patterns.",
     technologies: ["Swift", "UIKit", "MVVM", "Firebase", "Combine", "Core Data"],
@@ -80,7 +132,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: "Spikap Apps",
     description: "Comprehensive public speaking and presentation coaching app with AI-powered feedback, progress tracking, and personalized learning paths. Features real-time speech analysis and performance metrics.",
     technologies: ["SwiftUI", "Combine", "Core ML", "CloudKit", "AVFoundation", "Speech Framework"],
@@ -94,7 +146,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: "Awaro Apps",
     description: "Award and recognition platform for organizations to manage employee achievements, recognition programs, and performance tracking. Includes gamification elements to boost engagement.",
     technologies: ["Swift", "VIPER", "RxSwift", "REST API", "Core Data", "Push Notifications"],
@@ -107,7 +159,7 @@ export const projects: Project[] = [
     ]
   },
   {
-    id: 4,
+    id: 5,
     title: "Produku Apps",
     description: "Product management and inventory tracking application for small to medium businesses with barcode scanning, real-time sync, and multi-language support. Streamlines inventory management processes.",
     technologies: ["Swift", "MVVM", "Core Data", "AVFoundation", "CloudKit", "Localization"],
@@ -123,49 +175,71 @@ export const projects: Project[] = [
 
 export const skills: Skill[] = [
   {
-    category: "Core Technologies",
-    items: ["Swift", "UIKit", "Combine", "RxSwift", "SwiftUI", "Objective-C"]
+    category: "Mobile Development",
+    items: ["Swift", "SwiftUI", "UIKit", "Flutter", "Dart", "React Native", "Objective-C"]
   },
   {
     category: "Architecture & Patterns",
-    items: ["MVVM", "Clean Architecture", "VIPER", "SOLID Principles", "Design Patterns"]
+    items: ["Clean Architecture", "MVVM", "Modular Architecture", "Atomic Design", "SOLID Principles", "Design Patterns", "Monorepo"]
   },
   {
-    category: "Tools & Technologies",
-    items: ["Git", "Fastlane", "XcodeGen", "CocoaPods", "SPM", "Makefile"]
+    category: "State Management & Reactive",
+    items: ["Combine", "RxSwift", "SwiftUI State", "Bloc Pattern", "Reactive Programming"]
   },
   {
-    category: "Firebase",
-    items: ["Firebase Distribution", "Analytics", "Crashlytics", "Remote Config", "Cloud Messaging"]
+    category: "Backend & API",
+    items: ["Node.js", "Nest.js", "Express.js", "REST API", "Prisma", "PostgreSQL"]
+  },
+  {
+    category: "Web Development",
+    items: ["Next.js", "TypeScript", "Tailwind CSS", "React", "HTML/CSS"]
+  },
+  {
+    category: "Tools & DevOps",
+    items: ["Git", "Fastlane", "XcodeGen", "CI/CD", "CocoaPods", "SPM", "Bitbucket", "Makefile"]
+  },
+  {
+    category: "AI & Cloud Services",
+    items: ["OpenAI API", "Firebase", "Firebase Analytics", "Crashlytics", "Remote Config", "Cloud Messaging"]
+  },
+  {
+    category: "Testing & Quality",
+    items: ["Unit Testing", "Integration Testing", "UI Testing", "Dependency Injection", "Code Review", "Test Coverage"]
   },
   {
     category: "Development Practices",
-    items: ["CI/CD", "Unit Testing", "UI Testing", "Code Review", "Agile/Scrum"]
+    items: ["Agile/Scrum", "Code Review", "Technical Documentation", "Platform Engineering", "Modular Development"]
   },
   {
-    category: "Other Skills",
-    items: ["Networking", "Data Persistence", "Localization", "Push Notifications", "Performance Optimization"]
+    category: "UI/UX & Design",
+    items: ["Balsamiq", "Competitive Analysis", "UX Research", "Responsive Design", "Localization"]
+  },
+  {
+    category: "Core Technologies",
+    items: ["Data Persistence", "Networking", "Push Notifications", "Performance Optimization", "Multi-currency"]
   }
 ];
 
-// Education data
-export const education = [
+export const education: Education[] = [
   {
     institution: "Pertamina University, Jakarta Indonesia",
     degree: "Bachelor of Computer Science",
     period: "August 2016 – December 2020",
-    description: "Focused on software engineering, algorithms, and data structures. Graduated with comprehensive knowledge in computer science fundamentals."
+    description: "Focused on software engineering, algorithms, and data structures. Graduated with comprehensive knowledge in computer science fundamentals.",
+    skills: ["Algorithms", "Data Structures", "Software Engineering", "Computer Science", "OOP", "Database Systems"],
+    icon: "🎓"
   },
   {
-    institution: "Student of Apple Developer Academy",
+    institution: "Apple Developer Academy",
     degree: "iOS Development Program",
     period: "February 2020 – December 2021",
-    description: "Intensive training in iOS development, Swift programming, and Apple ecosystem technologies. Hands-on experience with real-world projects."
+    description: "Intensive training in iOS development, Swift programming, and Apple ecosystem technologies. Hands-on experience with real-world projects.",
+    skills: ["Swift", "UIKit", "iOS Development", "Xcode", "App Store", "Mobile Design", "Human Interface Guidelines"],
+    icon: "📱"
   }
 ];
 
-// Achievements data
-export const achievements = [
+export const achievements: Achievement[] = [
   {
     title: "NATIONAL INNOVATION PROJECT COMPETITION 2019",
     position: "SECOND RUNNER UP",
@@ -186,8 +260,7 @@ export const achievements = [
   }
 ];
 
-// Personal info
-export const personalInfo = {
+export const personalInfo: PersonalInfo = {
   name: "Aries Dwi Prasetiyo",
   title: "Senior iOS Engineer | Swift Enthusiast | Clean Architecture Advocate | SOLID Principles Practitioner",
   phone: "+62 812-3010-2023",

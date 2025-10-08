@@ -15,7 +15,7 @@ export default function Header() {
     { name: 'Experience', href: '/#experience' },
     { name: 'Casha Project', href: '/casha' }, // Link to dedicated page
     { name: 'Skills', href: '/#skills' },
-    { name: 'Contact', href: '/#contact' },
+  
   ]
 
   const isActive = (href: string) => {

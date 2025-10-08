@@ -78,7 +78,7 @@ export default function Hero() {
 
           {/* Scroll indicator */}
           <div className="mt-16">
-            <a href="#about" className="text-gray-400 hover:text-gray-600 transition-colors group">
+            <a href="#casha-overview" className="text-gray-400 hover:text-gray-600 transition-colors group">
               <div className="flex flex-col items-center gap-2">
                 <span className="text-xs uppercase tracking-widest text-gray-500 group-hover:text-gray-700">Explore More</span>
                 <svg className="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
