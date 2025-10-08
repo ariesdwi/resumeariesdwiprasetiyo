@@ -68,7 +68,7 @@ export default function Education() {
                 <div className="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-gray-600 text-lg">🎓</span>
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2 text-sm">Bachelor's Degree</h4>
+                <h4 className="font-semibold text-gray-900 mb-2 text-sm">Bachelor&apos;s Degree</h4>
                 <p className="text-gray-600 text-xs">Computer Science Foundation</p>
                 <p className="text-gray-500 text-xs mt-1">Pertamina University</p>
               </div>
