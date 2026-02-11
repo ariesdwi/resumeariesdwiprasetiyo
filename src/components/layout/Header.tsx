@@ -16,6 +16,7 @@ export default function Header() {
     { name: 'Experience', href: '#experience' },
     { name: 'Skills', href: '#skills' },
     { name: 'Education', href: '#education' },
+    { name: 'Project', href: '#casha-overview' },
   ]
 
   const isActive = (href: string) => {
