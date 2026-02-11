@@ -14,8 +14,8 @@ export default function Header() {
   const navItems = [
     { name: 'Home', href: '#' },
     { name: 'Experience', href: '#experience' },
-    { name: 'Challenges', href: '#achievements' },
     { name: 'Skills', href: '#skills' },
+    { name: 'Education', href: '#education' },
   ]
 
   const isActive = (href: string) => {

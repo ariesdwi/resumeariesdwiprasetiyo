@@ -22,7 +22,7 @@ export default function CashaProject() {
   const appStoreUrl = "https://apps.apple.com/id/app/cashaapp/id6754607757";
 
   return (
-    <section id="casha-project" className="pt-8 pb-20 bg-white">
+    <section id="casha-project-section" className="pt-8 pb-20 bg-white">
       <div className="container mx-auto px-6">
         {/* Back to Home */}
         <div className="mb-8">
@@ -56,29 +56,44 @@ export default function CashaProject() {
                   </div>
                   <div>
                     <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-2">Casha</h1>
-                    <p className="text-gray-600 text-lg">Your money, organized automatically.</p>
+                    <p className="text-gray-600 text-lg">AI-Powered Personal Finance App</p>
                   </div>
                 </div>
                 
                 <p className="text-gray-700 text-lg mb-8 leading-relaxed">
-                  Stay on top of weekly, monthly, yearly goals with smart expense tracking 
-                  and beautiful analytics. Just chat or snap, Casha does the rest.
+                  Architected and built production-ready finance app demonstrating modern iOS development with AI integration. 
+                  Featuring scalable Clean Architecture with modular monorepo enabling 80% code reusability across iOS and iPad.
                 </p>
 
-                {/* Quick Stats */}
-                <div className="grid grid-cols-3 gap-4 mb-8">
-                  <div className="text-center p-3 bg-white rounded-lg border border-gray-200 shadow-sm">
-                    <div className="text-gray-900 font-bold text-lg">SwiftUI</div>
-                    <div className="text-gray-500 text-xs">Framework</div>
-                  </div>
-                  <div className="text-center p-3 bg-white rounded-lg border border-gray-200 shadow-sm">
-                    <div className="text-gray-900 font-bold text-lg">AI-Powered</div>
-                    <div className="text-gray-500 text-xs">Features</div>
-                  </div>
-                  <div className="text-center p-3 bg-white rounded-lg border border-gray-200 shadow-sm">
-                    <div className="text-gray-900 font-bold text-lg">Free</div>
-                    <div className="text-gray-500 text-xs">Download</div>
-                  </div>
+                {/* Key Features */}
+                <div className="space-y-4 mb-8">
+                   <div className="flex items-start gap-3">
+                      <div className="mt-1 w-5 h-5 bg-gray-900 rounded-full flex items-center justify-center shrink-0">
+                         <span className="text-white text-[10px]">✓</span>
+                      </div>
+                      <p className="text-gray-700 text-sm">AI-powered categorization reducing manual data entry by 70%</p>
+                   </div>
+                   <div className="flex items-start gap-3">
+                      <div className="mt-1 w-5 h-5 bg-gray-900 rounded-full flex items-center justify-center shrink-0">
+                         <span className="text-white text-[10px]">✓</span>
+                      </div>
+                      <p className="text-gray-700 text-sm">Offline-first data layer using Core Data sync for 100% functionality</p>
+                   </div>
+                   <div className="flex items-start gap-3">
+                      <div className="mt-1 w-5 h-5 bg-gray-900 rounded-full flex items-center justify-center shrink-0">
+                         <span className="text-white text-[10px]">✓</span>
+                      </div>
+                      <p className="text-gray-700 text-sm">Modular monorepo architecture for high scalability</p>
+                   </div>
+                </div>
+
+                {/* Tech Stack Badge */}
+                <div className="flex flex-wrap gap-2 mb-8">
+                   {['Swift', 'SwiftUI', 'Combine', 'Clean Architecture', 'Core Data', 'CloudKit', 'Alamofire', 'AI API Integration'].map(tech => (
+                      <span key={tech} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                         {tech}
+                      </span>
+                   ))}
                 </div>
 
                 {/* Action Buttons */}
@@ -127,7 +142,7 @@ export default function CashaProject() {
           {/* More sections can follow... */}
           <div id="demo" className="mt-16 text-center">
              <h2 className="text-2xl font-bold mb-8 text-gray-900">Watch it in Action</h2>
-             <div className="max-w-4xl mx-auto aspect-video bg-gray-100 rounded-xl overflow-hidden shadow-2xl">
+             <div className="max-w-4xl mx-auto aspect-video bg-gray-100 rounded-xl overflow-hidden shadow-2xl border border-gray-200">
                 <iframe 
                   width="100%" 
                   height="100%" 
@@ -136,6 +151,7 @@ export default function CashaProject() {
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
+                  className="rounded-xl"
                 ></iframe>
              </div>
           </div>
