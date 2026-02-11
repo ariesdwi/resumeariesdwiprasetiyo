@@ -24,16 +24,6 @@ export default function CashaProject() {
   return (
     <section id="casha-project-section" className="pt-8 pb-20 bg-white">
       <div className="container mx-auto px-6">
-        {/* Back to Home */}
-        <div className="mb-8">
-          <a 
-            href="#" 
-            className="inline-flex items-center gap-2 text-gray-600 hover:text-gray-900 transition-colors text-sm font-medium"
-          >
-            <span>←</span>
-            <span>Back to Portfolio</span>
-          </a>
-        </div>
 
         <div className="max-w-7xl mx-auto">
           {/* Hero Banner Section */}
