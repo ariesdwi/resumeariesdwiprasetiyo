@@ -1,26 +1,27 @@
-// components/layout/Header.tsx
-'use client'
-
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { personalInfo } from '@/lib/data'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const pathname = usePathname()
+  const [hash, setHash] = useState(window.location.hash)
+
+  useEffect(() => {
+    const handleHashChange = () => setHash(window.location.hash)
+    window.addEventListener('hashchange', handleHashChange)
+    return () => window.removeEventListener('hashchange', handleHashChange)
+  }, [])
 
   const navItems = [
-    { name: 'Home', href: '/' },
-    { name: 'Experience', href: '/#experience' },
-    { name: 'Casha Project', href: '/casha' }, // Link to dedicated page
-    { name: 'Skills', href: '/#skills' },
-  
+    { name: 'Home', href: '#' },
+    { name: 'Experience', href: '#experience' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Education', href: '#education' },
+    { name: 'Project', href: '#casha-overview' },
   ]
 
   const isActive = (href: string) => {
-    if (href === '/') return pathname === '/'
-    return pathname.startsWith(href)
+    if (href === '#' || href === '') return hash === '' || hash === '#'
+    return hash === href
   }
 
   return (
@@ -28,7 +29,7 @@ export default function Header() {
       <nav className="container mx-auto px-6">
         <div className="flex justify-between items-center py-4">
           {/* Logo/Name */}
-          <Link href="/" className="flex items-center space-x-3">
+          <a href="#" className="flex items-center space-x-3">
             <div className="w-8 h-8 bg-gray-900 rounded flex items-center justify-center">
               <span className="text-white font-semibold text-sm">
                 {personalInfo.name.split(' ').map(n => n[0]).join('')}
@@ -37,12 +38,12 @@ export default function Header() {
             <span className="text-lg font-semibold text-gray-900">
               {personalInfo.name.split(' ')[0]} {personalInfo.name.split(' ')[1]}
             </span>
-          </Link>
+          </a>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <Link
+              <a
                 key={item.name}
                 href={item.href}
                 className={`transition-colors font-medium text-sm uppercase tracking-wide ${
@@ -52,7 +53,7 @@ export default function Header() {
                 }`}
               >
                 {item.name}
-              </Link>
+              </a>
             ))}
           </div>
 
@@ -75,7 +76,7 @@ export default function Header() {
           <div className="md:hidden py-4 border-t border-gray-200 bg-white">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <Link
+                <a
                   key={item.name}
                   href={item.href}
                   className={`transition-colors font-medium text-sm uppercase tracking-wide py-2 ${
@@ -84,7 +85,7 @@ export default function Header() {
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
-                </Link>
+                </a>
               ))}
             </div>
           </div>
