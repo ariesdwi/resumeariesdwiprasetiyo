@@ -1,0 +1,95 @@
+import { useState, useEffect } from 'react'
+import { personalInfo } from '@/lib/data'
+
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [hash, setHash] = useState(window.location.hash)
+
+  useEffect(() => {
+    const handleHashChange = () => setHash(window.location.hash)
+    window.addEventListener('hashchange', handleHashChange)
+    return () => window.removeEventListener('hashchange', handleHashChange)
+  }, [])
+
+  const navItems = [
+    { name: 'Home', href: '#' },
+    { name: 'Experience', href: '#experience' },
+    { name: 'Challenges', href: '#achievements' },
+    { name: 'Skills', href: '#skills' },
+  ]
+
+  const isActive = (href: string) => {
+    if (href === '#' || href === '') return hash === '' || hash === '#'
+    return hash === href
+  }
+
+  return (
+    <header className="fixed top-0 w-full bg-white border-b border-gray-200 z-50">
+      <nav className="container mx-auto px-6">
+        <div className="flex justify-between items-center py-4">
+          {/* Logo/Name */}
+          <a href="#" className="flex items-center space-x-3">
+            <div className="w-8 h-8 bg-gray-900 rounded flex items-center justify-center">
+              <span className="text-white font-semibold text-sm">
+                {personalInfo.name.split(' ').map(n => n[0]).join('')}
+              </span>
+            </div>
+            <span className="text-lg font-semibold text-gray-900">
+              {personalInfo.name.split(' ')[0]} {personalInfo.name.split(' ')[1]}
+            </span>
+          </a>
+          
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex space-x-8">
+            {navItems.map((item) => (
+              <a
+                key={item.name}
+                href={item.href}
+                className={`transition-colors font-medium text-sm uppercase tracking-wide ${
+                  isActive(item.href) 
+                    ? 'text-gray-900 border-b-2 border-gray-900' 
+                    : 'text-gray-700 hover:text-gray-900'
+                }`}
+              >
+                {item.name}
+              </a>
+            ))}
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden p-2"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            <div className="w-6 flex flex-col space-y-1">
+              <div className={`h-0.5 bg-gray-700 transition-all ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></div>
+              <div className={`h-0.5 bg-gray-700 transition-all ${isMenuOpen ? 'opacity-0' : ''}`}></div>
+              <div className={`h-0.5 bg-gray-700 transition-all ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></div>
+            </div>
+          </button>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t border-gray-200 bg-white">
+            <div className="flex flex-col space-y-4">
+              {navItems.map((item) => (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  className={`transition-colors font-medium text-sm uppercase tracking-wide py-2 ${
+                    isActive(item.href) ? 'text-gray-900' : 'text-gray-700 hover:text-gray-900'
+                  }`}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.name}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+      </nav>
+    </header>
+  )
+}
