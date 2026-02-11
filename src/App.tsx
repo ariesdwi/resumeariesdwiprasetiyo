@@ -15,13 +15,13 @@ export default function App() {
       <Header />
       <main className="min-h-screen">
         <Hero />
+        <Experience />
+        <Skills />
+        <Education />
         <CashaOverview />
         <div id="casha-project-section">
           <CashaProject />
         </div>
-        <Experience />
-        <Skills />
-        <Education />
         <Contact />
       </main>
       <footer className="py-12 bg-gray-50 border-t border-gray-100">

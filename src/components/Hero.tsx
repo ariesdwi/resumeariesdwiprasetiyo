@@ -59,11 +59,10 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Scroll indicator */}
           <div className="mt-8">
-            <a href="#casha-overview" className="text-gray-400 hover:text-gray-600 transition-colors group">
+            <a href="#experience" className="text-gray-400 hover:text-gray-600 transition-colors group">
               <div className="flex flex-col items-center gap-2">
-                <span className="text-xs uppercase tracking-widest text-gray-500 group-hover:text-gray-700 font-bold">Latest Project</span>
+                <span className="text-xs uppercase tracking-widest text-gray-500 group-hover:text-gray-700 font-bold">Explore More</span>
                 <svg className="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
                 </svg>
